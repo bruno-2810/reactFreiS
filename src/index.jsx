@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Navegacao from './navegacao';
 
 import './index.scss';
 
