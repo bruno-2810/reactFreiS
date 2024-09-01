@@ -2,12 +2,51 @@ body {
   margin: 0;
   font-family: 'Roboto';
   background-color: #f5f6fa;
+
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .bold {
+    font-weight: 700
+  }
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  .secao {
+    display: flex;
+    width: 480px;
+    height: 30px;
+    box-shadow: 0px 0px 10px #ADADAD40;
+    border-radius: 12px;
+    background-color: white;
+
+    padding: 15px 20px;
+
+    .secao h3 {
+      color: #383131;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .secao input {
+      border-radius: 12px;
+      border: #A5A5A5 1px;
+    }
+
+    .secao button {
+      background-color: #6278f7;
+      border-radius: 12px;
+      align-self: flex-end;
+    }
+  }
 }
