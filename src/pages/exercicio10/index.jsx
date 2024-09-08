@@ -11,12 +11,52 @@ export default function Exercicio10() {
     const [peso, setPeso] = useState(0);
     const [altura, setAltura] = useState(0);
     const [informacoes, setInformacoes] = useState([]);
+    const [editando, setEditando] = useState(-1);
 
     function adicionar() {
-        setInformacoes([...setInformacoes, altura]);
-    }
+        let imc = Number(peso) / (Number(altura) * Number(altura));
 
-    //`Peso: {peso} | Altura: {altura}`
+        if (peso != 0 && altura != 0) {
+
+            if (editando == -1) {
+                if (imc <= 18.4) {
+                    setInformacoes([...informacoes, `Altura: ${altura} | Peso: ${peso} | Situação: Abaixo do Peso`])
+                    setAltura(0);
+                    setPeso(0);
+                }
+                else if (imc >= 18.5 && imc <= 29.9) {
+                    setInformacoes([...informacoes, `Altura: ${altura} | Peso: ${peso} | Situação: Peso Normal`])
+                    setAltura(0);
+                    setPeso(0);
+                }
+                else {
+                    setInformacoes([...informacoes, `Altura: ${altura} | Peso: ${peso} | Situação: Acima do Peso`])
+                    setAltura(0);
+                    setPeso(0);
+                }
+            }
+            else {
+
+            }
+        }
+    }
+    
+    function removerImc(pos) {
+        informacoes.splice(pos, 1);
+        setInformacoes([...informacoes])
+    }
+    
+    function alterarImc (pos) {
+        setAltura(informacoes[pos])
+        setPeso(informacoes[pos])
+    }
+    
+        function enter(e) {
+            if (e.key == 'Enter') {
+                adicionar()
+            }
+        }
+
 
     return (
 
@@ -34,13 +74,13 @@ export default function Exercicio10() {
                         <div className='entrada'>
 
                             <h3 className='h3'>Altura</h3>
-                            <input type="text" className='input' value={altura} onChange={e => setAltura(e.target.value)} />
+                            <input type="text" className='input' value={altura} onKeyUp={enter} onChange={e => setAltura(e.target.value)} />
                         </div>
 
                         <div className='entrada'>
 
                             <h3 className='h3'>Peso</h3>
-                            <input type="text" className='input' value={peso} onChange={e => setPeso(e.target.value)} />
+                            <input type="text" className='input' value={peso} onKeyUp={enter} onChange={e => setPeso(e.target.value)} />
                         </div>
 
                     </div>
@@ -49,7 +89,17 @@ export default function Exercicio10() {
                 </div>
 
                 <div className='resposta'>
-                    {informacoes}
+                    <ul>
+                        {informacoes.map((item, pos) =>
+                            <div className='res'>
+                                <li key={pos}>
+                                    {item}
+                                </li>
+                                <img src="./remover.png" alt="" onClick={() => removerImc(pos)} />
+                                <img src="./edit.png" alt="" onClick={() => alterarImc(pos)}/>
+                            </div>
+                        )}
+                    </ul>
                 </div>
 
             </div>
