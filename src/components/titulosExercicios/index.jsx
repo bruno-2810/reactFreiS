@@ -6,10 +6,15 @@ export default function Titulos(props) {
     return (
         <div className="container">
             <div className="conteudo">
-                <Link to="/" className="link"><img src="./seta.png" alt="" className="img"/></Link>
+
+                <Link to="/">
+                    <img src="./seta.png" className="img" />
+                </Link>
+
                 <h2>{props.titulo}</h2>
+                
             </div>
-            <div className="faixa"></div>
+            <div className="faixa" style={{ backgroundColor: props.cor }}></div>
         </div>
     )
 

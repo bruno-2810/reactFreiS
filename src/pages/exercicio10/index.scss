@@ -1,44 +1,70 @@
-body {
-  margin: 0;
-  font-family: 'Roboto';
-  background-color: #f5f6fa;
-
-  .menu {
+.menue10 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     margin-top: 30px;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
 
     .resposta{
-        margin-left: 200px;
-        margin-top: -10px;
+
+
+        ul{
+            list-style-type: none;
+            margin: 0px;
+        }
+
+        li{
+            display: flex;
+            align-items: center;
+            width: 700px;
+            background-color: white;
+            height: 50px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px #ADADAD40;
+            font-size: 18px;
+            font-weight: 700;
+            color: #383131;
+
+        }
     }
+
+
 
     .secao {
         display: flex;
         flex-direction: column;
-        width: 480px;
+        width: 395px;
         box-shadow: 0px 0px 10px #ADADAD40;
         border-radius: 12px;
         background-color: white;
- 
+        margin-left: 80px;
+
+
+        .entradas{
+            display: flex;
+            flex-direction: row;
+
+            .entrada{
+                display: flex;
+                flex-direction: column;
+            }
+        }
      
 
         .h3 {
             color: #383131;
             font-weight: 700;
             font-size: 18px;
-            margin-left: 25px;
+            margin-left: 30px;
         }
 
         .input {
             border-radius: 12px;
             border: #A5A5A5 solid 1px;
             height: 41px;
-            width: 414px;
+            width: 150px;
             margin-left: 25px;
-            margin-right: 25px;
+     
             font-size: 20px;
         }
 
@@ -51,25 +77,9 @@ body {
             font-size: 16px;
             color: white;
             border: none;
-            padding: 15px 60px;
+            padding: 15px 40px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
     }
 }
-
-
-
-
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-
-  .bold {
-    font-weight: 700
-  }
-
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
