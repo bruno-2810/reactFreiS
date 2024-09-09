@@ -32,17 +32,17 @@ export default function Exerci3(props) {
 
             <div className="menu">
             <div className="secao">
-            <h3 className="h3"> Açai Pequeno </h3>
+            <h3 className="h3"> Quantidade Açai Pequeno </h3>
                     <input type="text" className="input" value={qtdPequeno} onChange={e => setQtdPequeno(e.target.value)} />
-                    <h3 className="h3"> Açai Médio </h3>
+                    <h3 className="h3"> Quantidade Açai Médio </h3>
                     <input type="text" className="input" value={qtdMedio} onChange={e => setQtdMedio(e.target.value)} />
-                    <h3 className="h3"> Açai Grande </h3>
+                    <h3 className="h3"> Quantidade Açai Grande </h3>
                     <input type="text" className="input" value={qtdGrande} onChange={e => setQtdGrande(e.target.value)} />
                     <button className="button" onClick={total}>Executar</button>
 
                 </div>
                 <div className="resposta">
-                    <h3>o preço do Açai é {resultado.toFixed(2)} R$</h3>
+                    <h3>Resultado: O Total é {resultado.toFixed(2)} R$</h3>
                 </div>
         </div>
 </div>
