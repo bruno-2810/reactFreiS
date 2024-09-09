@@ -3,6 +3,7 @@ import Inicio from "./pages/inicio";
 import Sobre from "./pages/sobre";
 import Exercicio1 from "./pages/exercicio1";
 import Exercicio2 from "./pages/exercicio2";
+import Exerci3 from "./pages/exercicio3";
 import Exercicio4 from "./pages/exercicio4";
 import Exercicio5 from "./pages/exercicio5";
 import Exercicio10 from "./pages/exercicio10";
@@ -20,6 +21,7 @@ export default function Navegacao () {
                 <Route path='/sobre' element = {<Sobre/>}/>
                 <Route path='/exercicio1' element = {<Exercicio1/>}/>
                 <Route path='/exercicio2' element = {<Exercicio2/>}/>
+                <Route path='/exercicio3' element = {<Exerci3/>}/>
                 <Route path='/exercicio4' element = {<Exercicio4/>}/>
                 <Route path='/exercicio5' element = {<Exercicio5/>}/>
                 <Route path='/exercicio10' element = {<Exercicio10/>}/>
